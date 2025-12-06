@@ -11,13 +11,12 @@
     ./gaming.nix
     ./gsr.nix
     ./graphics.nix
-    ./lanzaboote.nix
+    #./lanzaboote.nix
     ./lix.nix
     ./niri.nix
     ./nh.nix
     ./openrgb.nix
     ./performance.nix
-    ./security.nix
     ./tuned.nix
   ];
 
@@ -55,7 +54,7 @@
     hostFiles = [
       (pkgs.fetchurl {
         url = "https://hblock.molinero.dev/hosts";
-        hash = "sha256-U6N1el1oejYNMJI1A507KqsuNNcL7B8KTL6/VVQr4aI=";
+        hash = "sha256-vF1IEr7PFzH7WCfCaDv2tUC0HywW6dl0xiT2C+L8HiY=";
       })
     ];
     networkmanager = {

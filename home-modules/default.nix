@@ -11,10 +11,14 @@
     ./starship.nix
     ./vesktop.nix
     ./zed.nix
+    inputs.chaotic.homeManagerModules.default
+    inputs.catppuccin.homeModules.catppuccin
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
   ];
 
   programs.home-manager.enable = true;
-
+  
   nix = {
     settings = {
       builders-use-substitutes = true;

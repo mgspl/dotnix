@@ -326,8 +326,9 @@
         # Feature Enablement
         "layout.css.grid-template-masonry-value.enabled" = true; # Enable CSS Masonry layout
       };
-
-      policies = {
+    };
+    
+     policies = {
         "policies" = {
           "DisableFeedbackCommands" = true;
           "DisableFirefoxStudies" = true;
@@ -355,9 +356,6 @@
             "Locked" = true;
           };
           "Extensions" = {
-            "Install" = [
-              "https =//addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
-            ];
             "Uninstall" = [
               "amazondotcom@search.mozilla.org"
               "bing@search.mozilla.org"
@@ -379,6 +377,5 @@
           };
         };
       };
-    };
   };
 }

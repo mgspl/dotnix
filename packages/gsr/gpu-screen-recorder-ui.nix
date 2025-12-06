@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
   src = fetchgit {
     url = "https://repo.dec05eba.com/${pname}";
     tag = version;
-    hash = "sha256-XVxZyFHod+t7lfwhTSYsWerReBBukMVodauL+MmTqaE=";
+    hash = "sha256-BNDoNJMV5qsyl88duQSm4+poehu6WUlAeGA87maElkk=";
   };
 
   postPatch = ''
