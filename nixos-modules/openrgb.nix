@@ -1,9 +1,9 @@
 {
   pkgs,
+  lib,
   ...
 }:
-/*
-       let
+  let
     openrgb = pkgs.openrgb.overrideAttrs {
       version = "git";
       src = pkgs.fetchFromGitLab {
@@ -19,13 +19,12 @@
       '';
     };
   in
-*/
 {
   # Enable OpenRGB
 
   services.hardware.openrgb = {
     enable = true;
-    package = pkgs.openrgb_git;
+    package = openrgb;
   };
-  services.udev.packages = [ pkgs.openrgb_git ];
+  services.udev.packages = [ openrgb ];
 }

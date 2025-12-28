@@ -43,4 +43,5 @@
     xwayland-satellite-unstable
   ];
   environment.variables.NIXOS_OZONE_WL = "1";
+  systemd.user.services.niri-flake-polkit.enable = false;
 }

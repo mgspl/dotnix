@@ -13,6 +13,7 @@
         ;
     })
     inputs.niri.overlays.niri
+    inputs.nix-cachyos-kernel.overlays.pinned
     (import ../packages/overlay.nix)
   ];
 
@@ -31,6 +32,9 @@
       builders-use-substitutes = true;
       trusted-users = [ "@wheel" ];
       max-jobs = "auto";
+      # Cachyos Kernel Binary Cache
+      substituters = [ "https://attic.xuyh0120.win/lantian" ];
+      trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
     };
   };
 

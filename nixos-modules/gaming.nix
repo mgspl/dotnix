@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -8,7 +9,7 @@
 
   environment.systemPackages = [
     pkgs.mangohud
-    pkgs.mangojuice
+    #pkgs.mangojuice
   ];
 
   programs.nix-ld.enable = true;
@@ -29,7 +30,7 @@
     };
 
     extraCompatPackages = [
-      pkgs.proton-cachyos_x86_64_v3
+      inputs.forkprince-nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos-v3-bin
     ];
   };
 }

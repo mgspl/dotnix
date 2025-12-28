@@ -13,9 +13,6 @@
     gnome-text-editor
     shotcut
 
-    inputs.ev357-nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.helium
-    inputs.loneros-nurpkgs.packages.${pkgs.stdenv.hostPlatform.system}.pear-desktop
-
     # Tools
     unzip
     zip

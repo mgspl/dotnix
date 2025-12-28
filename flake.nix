@@ -1,7 +1,12 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    # Cachyos Kernel
+    nix-cachyos-kernel = {
+      url = "github:xddxdd/nix-cachyos-kernel/release";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Shell and Niri
     catppuccin = {
@@ -37,18 +42,13 @@
     };
 
     # NurPKGS
-    loneros-nurpkgs = {
-      url = "github:lonerOrz/loneros-nur";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     rycee-nurpkgs = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ev357-nurpkgs = {
-      url = "github:Ev357/nur-packages";
+    forkprince-nurpkgs = {
+      url = "github:ForkPrince/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

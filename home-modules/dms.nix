@@ -11,14 +11,10 @@
     };
 
     enableSystemMonitoring = true; # System monitoring widgets (dgop)
-    enableClipboard = true; # Clipboard history manager
     enableVPN = false; # VPN management widget
-    enableBrightnessControl = false; # Backlight/brightness controls
-    enableColorPicker = false; # Color picker tool
     enableDynamicTheming = false; # Wallpaper-based theming (matugen)
     enableAudioWavelength = false; # Audio visualizer (cava)
     enableCalendarEvents = false; # Calendar integration (khal)
-    enableSystemSound = true; # System sound effects
 
     niri = {
       enableKeybinds = false; # Automatic keybinding configuration

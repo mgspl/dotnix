@@ -6,7 +6,6 @@
 {
   imports = [
     ./catppuccin.nix
-    ./chaotic.nix
     ./fonts.nix
     ./gaming.nix
     ./gsr.nix
@@ -15,14 +14,14 @@
     ./lix.nix
     ./niri.nix
     ./nh.nix
-    ./openrgb.nix
+    #./openrgb.nix
     ./performance.nix
     ./tuned.nix
   ];
 
   boot = {
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_cachyos;
+    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
     #extraModulePackages = with config.boot.kernelPackages; [zenpower];
     kernelParams = [
       "quiet"
@@ -54,7 +53,7 @@
     hostFiles = [
       (pkgs.fetchurl {
         url = "https://hblock.molinero.dev/hosts";
-        hash = "sha256-vF1IEr7PFzH7WCfCaDv2tUC0HywW6dl0xiT2C+L8HiY=";
+        hash = "sha256-PN390Mir7osd9NbEw4T+EiaHGnNipSNbN5YU6mZybSI=";
       })
     ];
     networkmanager = {

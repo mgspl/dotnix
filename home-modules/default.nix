@@ -11,10 +11,9 @@
     ./starship.nix
     ./vesktop.nix
     ./zed.nix
-    inputs.chaotic.homeManagerModules.default
     inputs.catppuccin.homeModules.catppuccin
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    inputs.dankMaterialShell.homeModules.dank-material-shell
+    inputs.dankMaterialShell.homeModules.niri
   ];
 
   programs.home-manager.enable = true;
